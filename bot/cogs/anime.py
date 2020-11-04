@@ -33,8 +33,8 @@ class Finder():
 		soup=bs4.BeautifulSoup(page,'html.parser')
 		soup.prettify()
 
-		Title=soup.find("span",attrs={"itemprop":"name"}).text
-		Synopsis=soup.find('span',attrs={'itemprop':'description'}).text
+		Title=soup.find("div",attrs={"itemprop":"name"}).text
+		Synopsis=soup.find('p',attrs={'itemprop':'description'}).text
 		Score=soup.find('div',attrs={'class':"fl-l score"}).text
 		image_get=soup.find('div',attrs={'style':'text-align: center;'})
 		Image=image_get.find('img')['data-src']

@@ -1,7 +1,8 @@
 from discord.ext import commands
 import asyncio
+import os
 
-Token = ""
+Token = os.getenv("TOKEN")
 
 extensions = ['cogs.anime']
 

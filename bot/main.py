@@ -4,7 +4,7 @@ import os
 
 Token = os.getenv("TOKEN")
 
-extensions = ['cogs.anime']
+extensions = ['cogs.anime','cogs.manga']
 
 class Free(commands.Bot):
 

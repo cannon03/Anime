@@ -39,7 +39,11 @@ class Finder():
 		soup.prettify()
 
 		Title=soup.find("span",attrs={"itemprop":"name"})
-		Title=Title.find("span",class_="title-english").text
+		if(Title.find("span",class_="title-english")):
+			Title=Title.find("span",class_="title-english").text
+		else:
+			Title=Title.text
+
 		
 		Synopsis=soup.find('span',attrs={'itemprop':'description'}).text
 		Score=soup.find('div',attrs={'class':"fl-l score"}).text
